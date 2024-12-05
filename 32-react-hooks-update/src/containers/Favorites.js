@@ -1,14 +1,11 @@
-import React from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import React, { useContext } from 'react';
 
 import FavoriteItem from '../components/Favorites/FavoriteItem';
+import { ProductsContext } from '../context/products-context';
 import './Products.css';
 
 const Favorites = () => {
-  const favoriteProducts = useSelector(
-    state => state.shop.products.filter(p => p.isFavorite),
-    shallowEqual
-  );
+  const favoriteProducts = useContext(ProductsContext).products.filter(p => p.isFavorite);
 
   let content = <p className="placeholder">Got no favorites yet!</p>;
 
