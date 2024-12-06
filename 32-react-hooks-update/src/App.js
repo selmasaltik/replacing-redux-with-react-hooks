@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Nav/Navigation';
 import ProductsPage from './containers/Products';
 import FavoritesPage from './containers/Favorites';
+import Counter from './containers/Counter';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<ProductsPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
+        <Counter />
       </main>
     </React.Fragment>
   );
